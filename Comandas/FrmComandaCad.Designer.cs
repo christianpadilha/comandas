@@ -95,7 +95,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(groupBox1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FrmComandaCad";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmComandaCad";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

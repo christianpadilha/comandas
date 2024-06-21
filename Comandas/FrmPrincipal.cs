@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Comandas
 {
@@ -15,6 +7,19 @@ namespace Comandas
         public FrmPrincipal()
         {
             InitializeComponent();
+            CriarBancoDeDados();
+        }
+        // método (visibilidade=private, retorno =
+
+        private void CriarBancoDeDados()
+        {
+            // criar uma variavel do tipo AppDbContext
+            // usar a variavel e acessar o contexto
+            // executar a migração == F5
+            using (var banco = new AppDbContext())
+            {
+                banco.Database.Migrate();
+            } 
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -54,7 +59,13 @@ namespace Comandas
 
         private void cyberGroupBox2_Load(object sender, EventArgs e)
         {
-         
+
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            // encerra o aplicativo
+            Application.Exit();
         }
     }
 }

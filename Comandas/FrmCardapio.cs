@@ -11,5 +11,10 @@ namespace Comandas
         {
 
         }
+
+        private void FrmCardapio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

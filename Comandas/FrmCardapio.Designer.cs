@@ -34,11 +34,14 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(798, 450);
+            ClientSize = new Size(685, 522);
+            FormBorderStyle = FormBorderStyle.None;
             MinimumSize = new Size(261, 65);
             Name = "FrmCardapio";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "dungeonForm1";
             TransparencyKey = Color.Fuchsia;
+            Load += FrmCardapio_Load;
             ResumeLayout(false);
         }
 
